@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+first_message = Message.create(greeting: 'My firt message from rails API')
+second_message = Message.create(greeting: 'My second message from rails API')
+third_message = Message.create(greeting: 'My third message from rails API')
+fourth_message = Message.create(greeting: 'My fourth message from rails API')
+fifth_message = Message.create(greeting: 'My fifth message from rails API')
