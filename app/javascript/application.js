@@ -2,13 +2,20 @@
 import "@hotwired/turbo-rails"
 import "./controllers"
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import App from './App';
+import store from './Redux/ConfigureStore';
 
-function App() {
-  return (<h1>Hello World!</h1>);
-}
 
-ReactDOM.render(
-  <App/>,
-  document.getElementById('root'),
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <BrowserRouter>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </BrowserRouter>
+  </React.StrictMode>,
 );
